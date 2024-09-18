@@ -1,0 +1,76 @@
+.about-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.about-title {
+    font-size: 2.2em;
+    color: #1a73e8;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+
+.about-subtitle {
+    font-size: 1.5em;
+    color: #1a73e8;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+
+.about-text, .about-intro {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #4a4a4a;
+    margin-bottom: 15px;
+}
+
+
+.about-tech-list {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.about-tech-list li {
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+}
+
+
+a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .about-section {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .about-title {
+        font-size: 1.8em;
+    }
+
+    .about-subtitle {
+        font-size: 1.3em;
+    }
+
+    .about-text, .about-intro {
+        font-size: 1em;
+    }
+}

@@ -1,0 +1,140 @@
+.container-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+legend {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    /* border-bottom: 3px dotted rgb(3, 3, 138); */
+}
+
+.form-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    
+}
+
+.form-input:focus {
+    border-color: #66b2ff;
+    box-shadow: 0 0 5px rgba(102, 178, 255, 0.5);
+}
+
+.error-input {
+    border-color: #e74c3c;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.btn-submit {
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-submit:hover {
+    background-color: #2980b9;
+}
+
+.bottom-text {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.bottom-text a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.bottom-text a:hover {
+    text-decoration: underline;
+} 
+
+
+.custom-success{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background-color: #9dd8ff;
+}
+.custom-success p {
+    padding : 10px;
+    color: rgb(0, 92, 0);
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;   
+}
+
+
+
+.form-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+
+.form-check-input {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; 
+    cursor: pointer;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+
+.form-check-input:checked {
+    background-color: #007bff; 
+    border-color: #007bff;
+    position: relative;
+}
+
+
+.form-check-input:hover {
+    border-color: #0056b3;
+}
+
+
+.form-check-input-label {
+    font-size: 16px;
+    color: #333;
+    cursor: pointer; 
+    transition: color 0.3s ease;
+}
+
+
+.form-check-input-label:hover {
+    color: #007bff;
+}
+

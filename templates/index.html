@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="World Health Data Visualization Portal - Visualizing global health data for better insights.">
+    {% if tilte%}
+    <title>World Health Data Visualization Portal - title</title>
+    {% else %}
+    <title>World Health Data Visualization Portal</title>
+    {% endif %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/master.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/Icon.JPG') }}" type="image/JPG">
+    {% block styles %}{% endblock %}
+</head>
+<body>
+    <header>
+        <h1 style="color:rgb(255, 255, 255)">World Health Data Visualization Portal</h1>
+        <p style="color:#e0f089"><b>Your source for interactive global health data visualizations.</b></p>
+    </header>
+    <!-- nav-bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <ul class="navbar-menu">
+                <li><a href="{{url_for('home')}}">Home</a></li>
+                <li><a href="{{url_for('register')}}">Register</a></li>
+                <li><a href="{{url_for('login')}}">Sign In</a></li>
+                <li><a href="{{url_for('contact')}}">Contact</a></li>
+                <li><a href="{{url_for('about')}}">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    <div class="{{ category }}"> <p>{{ message }} </p></div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    {% block content %}
+
+    {% endblock %}
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <ul class="navbar-menu">
+                    <li><a href="{{url_for('privacy')}}">Privacy</a></li>
+                    <li><a href="{{url_for('contact')}}">Contact</a></li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <ul class="social-menu">
+                    <li style="background-color: rgb(8, 8, 202);"><a href="#facebook">Facebook</a></li>
+                    <li style="background-color:rgb(223, 50, 136)"><a href="https://www.instagram.com/wor5334/" target="_blank">Instagram</a></li>
+                    <li style="background-color: rgb(255, 0, 0);"><a href="http://www.youtube.com/@WorldHealthDataVisualizationpo" target="_blank">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

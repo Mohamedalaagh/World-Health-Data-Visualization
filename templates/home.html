@@ -1,0 +1,52 @@
+{% extends 'index.html' %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}">
+{% endblock %}
+{% block content %}
+<div class="headline">
+    <span>D</span>iscover<span> t</span>he <span>L</span>atest <span>G</span>lobal <span>H</span>ealth <span>I</span>nsights
+</div>
+<div class="container-1">
+    <h1>Welcome to the World Health Data Visualization Portal</h1>
+    <p class="intro">The World Health Data Visualization Portal allows users to explore global health trends through interactive visualizations. 
+    Dive into real-time data insights, uncover patterns, and make informed decisions with dynamic, user-friendly tools.</p>
+    <a href="{{url_for('visualizations')}}" class="cta-button">Explore Visualizations</a>
+</div>
+
+<div class="container-2">
+    <h1 class="cards">Portal Features</h1>
+    <div class="features">
+        <!-- Feature 1: Interactive Data Visualizations -->
+        <div class="feature-card">
+            <img class="feature-image" src="{{ url_for('static', filename='images/card1.JPG') }}">
+            <h2 class="feature-title">Interactive Data Visualizations</h2>
+            <p class="feature-desc">Explore complex health data through interactive charts, graphs, and visual tools for better insights.</p>
+        </div>
+
+        <!-- Feature 2: Real-time Analysis -->
+        <div class="feature-card">
+            <img class="feature-image" src="{{ url_for('static', filename='images/card2.JPG') }}">
+            <h2 class="feature-title">Real-time Analysis Tools</h2>
+            <p class="feature-desc">Get up-to-date health data with real-time analysis to monitor trends and changes dynamically.</p>
+        </div>
+
+        <!-- Feature 3: Country/Region Filters -->
+        <div class="feature-card">
+            <img class="feature-image" src="{{ url_for('static', filename='images/card3.JPG') }}">
+            <h2 class="feature-title">Custom Filters by Region</h2>
+            <p class="feature-desc">Filter data by country or region to view specific health indicators and trends relevant to different areas.</p>
+        </div>
+
+        <!-- Feature 4: Easy-to-use Dashboard -->
+        <div class="feature-card">
+            <img class="feature-image" src="{{ url_for('static', filename='images/card4.JPG') }}">
+            <h2 class="feature-title">Easy-to-use Dashboard</h2>
+            <p class="feature-desc">Navigate through an intuitive dashboard that simplifies complex health data into easy-to-understand visualizations.</p>
+        </div>
+    </div>
+</div>
+<div class="visalization-btn">
+    <a href="{{url_for('visualizations')}}" class="ct-button">Explore Visualizations</a>
+</div>
+
+{% endblock %}

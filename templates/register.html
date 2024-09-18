@@ -1,0 +1,110 @@
+{% extends 'index.html' %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/forms.css') }}">
+{% endblock %}
+{% block content %}
+<div class="container-form">
+    <form action="" method="POST">
+        {{ form.hidden_tag() }} <!--for protecting the form so user cannot use any data put the site in risk zone -->
+        <fieldset>
+            <legend>Create an Account</legend>
+
+            <div class="form-group">
+                {{ form.fname.label(class='form-label') }}
+                {% if form.fname.errors %}
+                    {{ form.fname(class='form-input error-input') }}
+                    <div class="error-message">
+                        {% for error in form.fname.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.fname(class='form-input') }}
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                {{ form.lname.label(class='form-label') }}
+                {% if form.lname.errors %}
+                    {{ form.lname(class='form-input error-input') }}
+                    <div class="error-message">
+                        {% for error in form.lname.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.lname(class='form-input') }}
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                {{ form.username.label(class='form-label') }}
+                {% if form.username.errors %}
+                    {{ form.username(class='form-input error-input') }}
+                    <div class="error-message">
+                        {% for error in form.username.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.username(class='form-input') }}
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                {{ form.email.label(class='form-label') }}
+                {% if form.email.errors %}
+                    {{ form.email(class='form-input error-input') }}
+                    <div class="error-message">
+                        {% for error in form.email.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.email(class='form-input') }}
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                {{ form.password.label(class='form-label') }}
+                {% if form.password.errors %}
+                    {{ form.password(class='form-input error-input') }}
+                    <div class="error-message">
+                        {% for error in form.password.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.password(class='form-input') }}
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                {{ form.confirm_password.label(class='form-label') }}
+                {% if form.confirm_password.errors %}
+                    {{ form.confirm_password(class='form-input error-input') }}
+                    <div class="error-message">
+                        {% for error in form.confirm_password.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.confirm_password(class='form-input') }}
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                {{ form.submit(class='btn-submit') }}
+            </div>
+        </fieldset>
+    </form>
+
+    <div class="bottom-text">
+        <small>
+            Already have an Account? 
+            <a href="{{ url_for('login') }}">Sign in</a>
+        </small>
+    </div>
+</div>
+
+{% endblock %}
